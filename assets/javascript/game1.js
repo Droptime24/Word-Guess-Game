@@ -1,31 +1,33 @@
 
 // Words to be guessed
-var randomWords = [ "JavaScript", "CSS", "HTML", "Bootstrap"];
-
-//  Number of times the word is guessed right
-var wins = 0;
-
-// Words to be called
-var storedWords;
+var possibleWords = [ "JavaScript", "CSS", "HTML", "Bootstrap"];
+console.log(possibleWords);
 
 // Current word on screen
-var currentWord = [];
+var currentWord = 'CSS';
+console.log(currentWord);
+
+//  Number of times the word is guessed right
+var totalWins = 0;
+console.log(totalWins);
 
 //  Number of guesses allowed
 const allowedGuesses = 10;
+console.log(allowedGuesses);
 
 //  Amount of guesses remaining
 var guessesRemaining = 0;
+console.log(guessesRemaining);
 
 // Letters already guessed
 var guessedLetters = [];
+console.log(guessedLetters);
 
 
 
-
-
-var currentWord = randomWords[Math.floor(Math.random() * randomWords.length)];
-document.getElementById("#current-word")
+var currentWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
+document.getElementById("#currentWord");
+console.log(currentWord);
 
 
 
