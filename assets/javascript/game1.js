@@ -1,35 +1,31 @@
-// var currentWord = ["JavaScript", "CSS", "HTML", "Bootstrap"];
 
-// var youWin = "You Win!!"
-// var alreadyGuessed = ''
+// Words to be guessed
+var randomWords = [ "JavaScript", "CSS", "HTML", "Bootstrap"];
 
-// let wins = 0
+//  Number of times the word is guessed right
+var wins = 0;
 
-// let guessesRemaining = 10
-// let guessed = []
+// Words to be called
+var storedWords;
 
-var currentWord = ["JavaScript", "CSS", "HTML", "Bootstrap"]
+// Current word on screen
+var currentWord = [];
 
- for(i = 0; i < currentWord.length; i++) {
-    document.getElementById("currentword").innerHTML = (currentWord[i]); 
- }
+//  Number of guesses allowed
+const allowedGuesses = 10;
 
+//  Amount of guesses remaining
+var guessesRemaining = 0;
 
-
-var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
-    "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-
-var wins = 0
-var guesses = 0
-var guessed = 0
+// Letters already guessed
+var guessedLetters = [];
 
 
 
 
 
-
-
-
+var currentWord = randomWords[Math.floor(Math.random() * randomWords.length)];
+document.getElementById("#current-word")
 
 
 
