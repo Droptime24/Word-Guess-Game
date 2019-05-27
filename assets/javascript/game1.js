@@ -22,7 +22,9 @@ console.log(guessedLetters);
 // Current word on screen
 var currentWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
 console.log(currentWord);
+toScreen()
 
+// Generate
 function startGame() {
     for(i =0; i < currentWord.length; i++){
         var letter = {
@@ -42,9 +44,13 @@ function toScreen() {
         if(guessedLetters[i].beenGuessed) {
             word += guessedLetters[i].letter
         }else{
-            word += "_ "
+            word += "_ " 
         }
+        
     }
     document.getElementById("currentWord").innerHTML = word;
+    
+
 }
 startGame()
+
