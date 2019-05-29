@@ -1,7 +1,7 @@
-let possibleWords = ["java", "dog", "lizard", "bear"]
-let currentWord = 'dog'
+var possibleWords = ["javascript", "css", "html", "bootstrap"];
+let currentWord = 'css'
 let wins = 0
-let guessesRemaining = 6
+let guessesRemaining = 13
 let lettersGuessed = []
 function initGame() {
     assignCurrentWord()
@@ -28,7 +28,7 @@ function setEventListeners() {
         lettersGuessed.push(e.key)
         if (wordHasBeenGuessed()) {
             wins++
-            document.getElementById('wins-count').textContent = wins
+            document.getElementById('totalWins').textContent = wins
             initGame()
         }
         shouldGuessesGoDown(e.key)
@@ -39,7 +39,7 @@ function setEventListeners() {
 }
 function checkIfUserLost() {
     if (guessesRemaining <= 0) {
-        alert('you lost')
+        alert('You Loose!!') 
     }
 }
 function shouldGuessesGoDown(letterGuessed) {
@@ -48,8 +48,8 @@ function shouldGuessesGoDown(letterGuessed) {
     }
 }
 function updateDOM() {
-    document.getElementById("guesses-remaining").textContent = guessesRemaining
-    document.getElementById("letters-guessed").textContent = lettersGuessed
+    document.getElementById("guessesRemaining").textContent = guessesRemaining
+    document.getElementById("lettersGuessed").totextContent = lettersGuessed
     showLettersOrDashes()
 }
 function showLettersOrDashes() {
@@ -61,5 +61,5 @@ function showLettersOrDashes() {
             displayWord = displayWord + '_' + ' '
         }
     }
-    document.getElementById('display-word').textContent = displayWord
+    document.getElementById('currentWord').textContent = displayWord
 }
